@@ -18,6 +18,19 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #ffffff;
+  background-image:url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  
+}
+body > header {
+  background-color: darkorange;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #f4f1ec;
 }
 
 /*

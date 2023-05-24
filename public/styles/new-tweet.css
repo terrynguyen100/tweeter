@@ -1,0 +1,38 @@
+main > section {
+  margin:2.5%;
+}
+.new-tweet-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5%;
+  justify-content: center;
+  
+}
+#tweet-Bottom {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+  font-size: 0.75em;
+  padding-top: 5%;
+}
+div>button {
+  background-color: #4056a1;
+  color: #FFFFFF;
+  border:none;
+}
+form>label{
+  font-weight: bold;
+}
+
+#tweet-text {
+  border: none;
+  border-bottom: 3px solid black;
+  resize: none;
+  background-color: transparent;
+  font-size: 0.75em;
+  padding: 0px;
+}
+
+.neg {
+  color: red;
+}
