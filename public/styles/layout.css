@@ -16,19 +16,17 @@ html {
 
 body {
   color: #545149;
-  background-color: #ffffff;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
-  background-color: #ffffff;
-  background-image:url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  background-color: #f4f1ec;
+  /* background-image:url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png"); */
   
 }
-body > header {
+header.main-header {
   background-color: darkorange;
 }
 
-main {
-  width: 90%;
+main.container {
   margin: 0 auto;
   background-color: #f4f1ec;
 }
@@ -36,3 +34,22 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    justify-content: space-between;
+  }
+  header.main-header {
+    height: 35vh;
+    width: 30vw;
+    margin-top: 240px;
+    margin-left:2.5%;
+  }
+  main.container {
+    flex-grow: 1;
+    padding-top: 200px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}

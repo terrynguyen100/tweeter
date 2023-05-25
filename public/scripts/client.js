@@ -87,7 +87,6 @@ function tweetValidation () {
   } else {
     console.log('passed validation, returning true');
     return true;
-
   }
 }
 $(document).ready(function() {

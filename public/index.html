@@ -4,6 +4,7 @@
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -37,7 +38,7 @@
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
-<body>
+<body style="border: 1px solid blueviolet;">
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
@@ -48,22 +49,18 @@
   </nav>
   <header class="main-header">
     <div>
-      <div>
-        <img src="/images/profile-hex.png">
-      </div>
-      <div class="userName">
-        <span><strong>Terry</strong> Nguyen</span>
-      </div>
+      <img src="/images/profile-hex.png">
+      <span id="userName"><strong>Terry</strong> Nguyen</span>
     </div>
   </header>
 
   <!--  style = "border: 1px solid black;" -->
   <!-- Page-specific (main) content here -->
-  <main class="container" style="border: 1px solid red;">
+  <main class="container">
     <section id="error">
       <p></p>
     </section>
-    <section id="new-tweet-container" style="border: 1px solid black;">
+    <section id="new-tweet-container">
       <form id="new-tweet-form" >
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
