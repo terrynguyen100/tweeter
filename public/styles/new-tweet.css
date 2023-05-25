@@ -1,13 +1,17 @@
 main > section {
   margin:2.5%;
 }
-.new-tweet-form {
+#new-tweet-container {
   display: flex;
   flex-direction: column;
   padding: 2.5%;
-  justify-content: center;
-  
 }
+
+#new-tweet-form {
+  display: flex;
+  flex-direction: column;
+}
+
 #tweet-Bottom {
   display: flex;
   justify-content: space-between;
@@ -15,11 +19,27 @@ main > section {
   font-size: 0.75em;
   padding-top: 5%;
 }
-div>button {
+
+#submit-button {
   background-color: #4056a1;
   color: #FFFFFF;
-  border:none;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  padding: 5px;
 }
+
+#submit-button:hover{
+  outline-color: #384e9e;
+  outline-style: solid;
+  box-shadow: 0 0 10px #16359a;
+}
+
+
+    /* background-color: darken( #4056a1, 15%);
+    transition: all .3s;
+    border-radius: 10rem;
+    z-index: -1; */
+
 form>label{
   font-weight: bold;
 }
@@ -35,4 +55,14 @@ form>label{
 
 .neg {
   color: red;
+}
+
+/* for the new tweet error */
+#error {
+  display: none;
+  justify-content: center;
+  border: 2px red solid;
+  font-weight: bold;
+  color: red;
+  text-align: center;
 }

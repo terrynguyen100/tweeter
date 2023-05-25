@@ -4,10 +4,9 @@
 
 .tweet {
   padding: 2.5%;
-  /* this doesn't work !!!! */
   border: 3px solid #4056a1;
 }
-article.tweet header {
+.tweet-header {
   display: flex;  
   justify-content: space-between;
   height: 2em;
@@ -39,14 +38,19 @@ article.tweet p{
   font-weight: bold;
 }
 
-div i {
+i {
   color: #4056a1;
 }
 
-article.tweet-hovered{
+article.tweet:hover{
   box-shadow: 5px 5px gray;
 }
 
-.icon-hovered {
+i.footer-icon:hover {
   color: darkorange;
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
 }

@@ -1,0 +1,23 @@
+$.ajax({
+  url: '',
+  method: 'GET', //can also use POST, PUT DELETE PATCH
+  success: (response) => {},
+  error: (error) => {}
+})
+
+#2 way of using AJEX with jQuery:
+$.ajax({
+  url: '',
+  method: 'GET', //can also use POST, PUT DELETE PATCH,
+}).then(() => {})
+// this returns a promise instead 
+
+</hr> to draw a straight horizontal line
+
+
+<section class='tweet-container'>
+  <article>
+    header
+    footer
+  </article>
+</section>

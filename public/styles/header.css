@@ -1,10 +1,10 @@
-header {
+.main-header {
   height: 520px;
   width: 100%;
   display: flex;
 }
 
-header >div {
+.main-header > div {
   align-self: flex-end;
   height: 400px;
   width: 100%;
