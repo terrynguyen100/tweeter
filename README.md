@@ -6,8 +6,7 @@ Tweeter is a simple, single-page Twitter clone that focuses on the front-end asp
 
 !["Screenshot of desktop mode"](https://github.com/terrynguyen100/tweeter/blob/cdcca9e12449ecb962d2894fae0bc3987de32fde/docs/Screenshot%20of%20desktop%20mode.jpg)
 
-!["Screenshot of mobile mode"](https://github.com/terrynguyen100/tweeter/blob/cdcca9e12449ecb962d2894fae0bc3987de32fde/docs/Screenshot%20of%20mobile%20mode.jpg)
-![Screenshot of mobile mode](https://github.com/terrynguyen100/tweeter/assets/113662955/0d4ed289-326b-4086-ace6-640c2641757f)
+![Screenshot of mobile mode](https://github.com/terrynguyen100/tweeter/blob/c57595328ed664ea9856b45420390e67b9131d6d/docs/Screenshot%20of%20mobile%20mode.jpg)
 
 https://github.com/terrynguyen100/tweeter/assets/113662955/6d296365-dbf1-4d8c-acf1-5330ce989aaf
 
