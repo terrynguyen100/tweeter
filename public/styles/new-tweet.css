@@ -60,9 +60,11 @@ form>label{
 /* for the new tweet error */
 #error {
   display: none;
-  justify-content: center;
   border: 2px red solid;
   font-weight: bold;
   color: red;
   text-align: center;
+  padding: 4px;
 }
+
+@media only screen and (min-width: 1024px) {}

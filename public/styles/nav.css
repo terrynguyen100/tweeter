@@ -2,16 +2,17 @@ nav {
   height: 120px;
   width: 100vw;
   color: #FFFFFF;
-  /* padding: 0 1.5em; */
   display: flex;
   justify-content: space-between;
   position: fixed;
+  background-color: transparent;
 }
 
 nav >span {
   font-family: 'Bungee', cursive;
   align-self: center;
   font-size: 1.5em;
+  padding-left: 2.5%;
 }
 
 .navBarRight {
@@ -19,10 +20,21 @@ nav >span {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-right: 5%;
+  padding-top: 20px;
+}
+
+.hide {
+  display:none;
 }
 
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: #4056a1;
+    z-index: 9999;
   }
-}
+  .hide {
+    display: flex;
+    /* to not hide the navBarRight on desktop mode */
+  }
+} 

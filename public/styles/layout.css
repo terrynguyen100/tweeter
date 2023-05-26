@@ -22,13 +22,18 @@ body {
   /* background-image:url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png"); */
   
 }
-header.main-header {
-  background-color: darkorange;
-}
 
 main.container {
-  margin: 0 auto;
+  margin: 0 0;
   background-color: #f4f1ec;
+}
+
+
+#go-top-icon{
+  display:none;
+  position: fixed;
+  bottom: 4%;
+  right: 2.5%;
 }
 
 /*
@@ -40,16 +45,12 @@ main.container {
     display: flex;
     justify-content: space-between;
   }
-  header.main-header {
-    height: 35vh;
-    width: 30vw;
-    margin-top: 240px;
-    margin-left:2.5%;
-  }
+
   main.container {
     flex-grow: 1;
-    padding-top: 200px;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-top: 152px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
+

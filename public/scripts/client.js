@@ -74,21 +74,20 @@ function setEnterAsSubmit () {
     }
   })
 }
-
 function tweetValidation () {
   if ($('#tweet-text').val() === "") {
-    $('#error p').text("Tweet cannot be empty.")
+    $('#error').text("Tweet cannot be empty.")
     $('#error').slideDown("slow")
     return false;
   } else if ($('#tweet-text').val().length > 140) {
-    $('#error p').text("Tweet cannot be more than 140 characters")
+    $('#error').text("Tweet cannot be more than 140 characters")
     $('#error').slideDown("slow")
     return false;
   } else {
-    console.log('passed validation, returning true');
     return true;
   }
 }
+
 $(document).ready(function() {
   fetchTweets();
   setEnterAsSubmit();
@@ -100,10 +99,9 @@ $(document).ready(function() {
     
     //slide up the error message before removing it from our HTML everytime submit is clicked
     $('#error').slideUp("fast", function () {
-      // $('section').remove('#new-tweet-error');
       if (tweetValidation()) {
         postTweet($newTweet);
       }
     })
-  })
+  });
 })

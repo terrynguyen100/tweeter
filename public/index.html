@@ -36,15 +36,16 @@
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/composer.js"></script>
 </head>
 
-<body style="border: 1px solid blueviolet;">
+<body>
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
     <div class="navBarRight">
-      <span> <strong>Write</strong> a new tweet </span>
-      <i class="fa-solid fa-angles-down fa-beat" style="color: #ff0019;"></i>
+      <span class="compose"> <strong>Write</strong> a new tweet </span>
+      <i class="fa-solid fa-angles-down fa-bounce compose" style="color: #ff0019;"></i>
     </div>
   </nav>
   <header class="main-header">
@@ -57,11 +58,9 @@
   <!--  style = "border: 1px solid black;" -->
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <section id="error">
-      <p></p>
-    </section>
+    <section id="error"> </section>
     <section id="new-tweet-container">
-      <form id="new-tweet-form" >
+      <form id="new-tweet-form">
         <label for="tweet-text">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div id="tweet-Bottom">
@@ -72,8 +71,26 @@
     </section>
 
     <section id="tweets-container">
-      <!-- to be filled with jQuery from client.js -->
+      <article class="tweet">
+        <header class="tweet-header">
+          <div class="user-info">
+            <img src = "${escape(tweetData.user.avatars)}">
+            <span>${escape(tweetData.user.name)}</span>
+          </div>
+          <span class="tweet-user-name">${escape(tweetData.user.handle)}</span>
+        </header>
+        <p>${escape(tweetData.content.text)}</p>
+        <footer>
+          <span class="timeago"> ${escape(timeago.format(tweetData.created_at))}</span>
+          <div>
+            <i class="fa-solid fa-flag footer-icon"></i>
+            <i class="fa-solid fa-retweet footer-icon"></i>
+            <i class="fa-solid fa-heart footer-icon"></i>
+          </div>
+        </footer>
+      </article>;
     </section>
+    <i id ="go-top-icon" class="fa-solid fa-circle-chevron-up fa-2xl" style="color: #b70b0b;"></i>
   </main>
 </body>
 
