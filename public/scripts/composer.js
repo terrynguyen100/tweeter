@@ -3,16 +3,17 @@ $(document).ready(function() {
   $('#go-top-icon').css('cursor', 'pointer');
 
   //Write-a-new-tweet button at top right
-  $('.compose').on('click', function () {
+  $('.compose').on('click', function() {
     if ($('#new-tweet-container').css('display') === 'flex') {
-      $('#error').slideUp("fast", function () {
-        $('#new-tweet-container').slideUp("slow")})
+      $('#error').slideUp("fast", function() {
+        $('#new-tweet-container').slideUp("slow");
+      });
     } else {
-      $('#new-tweet-container').slideDown("slow", function () {
+      $('#new-tweet-container').slideDown("slow", function() {
         $("#tweet-text").focus();
-      })
+      });
     }
-    })
+  });
   
 
   //Hiding the write-a-new-tweet button at top right when scroll down 300px
@@ -28,10 +29,10 @@ $(document).ready(function() {
   });
 
   //Go-top-icon button
-  $('#go-top-icon').on('click', function () {
+  $('#go-top-icon').on('click', function() {
     $('html, body').animate({ scrollTop: 0 }, 'fast');
-    $('#new-tweet-container').slideDown("slow", function () {
+    $('#new-tweet-container').slideDown("slow", function() {
       $("#tweet-text").focus();
-    })
-  })
+    });
+  });
 });

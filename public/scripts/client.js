@@ -3,12 +3,12 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-function escape (str) {
+function escape(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-};
-function createTweetElement (tweetData) {
+}
+function createTweetElement(tweetData) {
   //XSS vulnerability fixed
   const $tweet = $(`
     <article class="tweet">
@@ -31,7 +31,7 @@ function createTweetElement (tweetData) {
     </article>`);
   return $tweet;
 }
-function renderTweet (data) {
+function renderTweet(data) {
   $('#tweets-container').empty();
 
   for (const tweet of data) {
@@ -40,16 +40,16 @@ function renderTweet (data) {
   }
 
 }
-function fetchTweets () {
+function fetchTweets() {
   $.ajax({
     url: 'http://localhost:8080/tweets',
     method: 'GET',
     success: (response) => {
       renderTweet(response);
     }
-  })
+  });
 }
-function postTweet (tweet) {
+function postTweet(tweet) {
 
   const urlencodedstring = tweet.serialize();
   //make a POST request to the server with the form's data
@@ -60,28 +60,28 @@ function postTweet (tweet) {
   }).then(() => {
     console.log('successfully added a new tweeet');
     fetchTweets();
-  })
+  });
 
   //reset the textarea to blank and the counter to 140 char
   $('#tweet-text').val("");
-  $('output.counter').text(140) ;
+  $('output.counter').text(140);
 }
-function setEnterAsSubmit () {
+function setEnterAsSubmit() {
   $("#new-tweet-form").keypress(function(event) {
     if (event.which === 13) { // 13 is the keycode for Enter key
       event.preventDefault();
       $("#new-tweet-form").submit();
     }
-  })
+  });
 }
-function tweetValidation () {
+function tweetValidation() {
   if ($('#tweet-text').val() === "") {
-    $('#error').text("Tweet cannot be empty.")
-    $('#error').slideDown("slow")
+    $('#error').text("Tweet cannot be empty.");
+    $('#error').slideDown("slow");
     return false;
   } else if ($('#tweet-text').val().length > 140) {
-    $('#error').text("Tweet cannot be more than 140 characters")
-    $('#error').slideDown("slow")
+    $('#error').text("Tweet cannot be more than 140 characters");
+    $('#error').slideDown("slow");
     return false;
   } else {
     return true;
@@ -94,14 +94,14 @@ $(document).ready(function() {
   const $newTweet = $('#new-tweet-form');
 
   //a listening event for the new tweet form 'submit'
-  $newTweet.on('submit', function (event) {
+  $newTweet.on('submit', function(event) {
     event.preventDefault();
     
     //slide up the error message before removing it from our HTML everytime submit is clicked
-    $('#error').slideUp("fast", function () {
+    $('#error').slideUp("fast", function() {
       if (tweetValidation()) {
         postTweet($newTweet);
       }
-    })
+    });
   });
-})
+});
